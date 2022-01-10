@@ -36,7 +36,7 @@
             <a class="nav-link active" aria-current="page" href="./index.html">INICIO</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">SOBRE NOSOTROS</a>
+            <a class="nav-link" href="./pages/sobre-nostoros.html">SOBRE NOSOTROS</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="./pages/Noticias.html">NOTICIAS</a>
@@ -45,7 +45,7 @@
             <a class="nav-link" href="./pages/quiero-ser-bombero.html">QUIERO SER BOMBERO</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">QUIERO COLABORAR</a>
+            <a class="nav-link" href="./pages/quiero-colaborar.html">QUIERO COLABORAR</a>
           </li>
         </ul>
       </div>
@@ -132,13 +132,13 @@
           ¿SABES POR QUÉ SOMOS VOLUNTARIOS?
         </h2>
           <p class="voluntarios__parrafo">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt veritatis ratione facere at. Asperiores, dignissimos.
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio saepe et ea, facere quaerat explicabo nostrum cupiditate, illo culpa labore ipsa velit voluptates cum aspernatur ut sed eius possimus tempore voluptatum expedita. Mollitia eius ex cumque voluptatum, tempora commodi perferendis, alias atque obcaecati, suscipit totam!
           </p>
           <p class="voluntarios__parrafo">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga voluptates deserunt tempora at? Mollitia, saepe. Error dignissimos quod non quis?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia quo, voluptates, sed facilis quae cumque iure sequi aliquid illo corrupti quibusdam cupiditate expedita, delectus deserunt. Id ratione dolores harum quia, culpa aliquam. Ex nobis magni sapiente vero nihil minima vel.
           </p>
           <p class="voluntarios__parrafo">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum quaerat repellat incidunt esse ut quod!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi animi aspernatur in voluptatum, dolor error iusto inventore voluptas explicabo eos sit exercitationem dolorum, est minima quasi, deleniti fugit natus quod quas pariatur cupiditate perferendis. Quod a consequatur repellat fugit tenetur.
           </p>
       </div class="voluntarios__botones">
           
@@ -153,7 +153,7 @@
           </button>
       </div>
 
-      <div class="voluntarios__quienes">
+      <div class="voluntarios__titulo">
         QUIENES NOS APOYAN
       </div>
 
@@ -161,13 +161,13 @@
       <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src="./images/c1.png" class="d-block w-100" alt="...">
+            <img src="./images/c1.png" class="d-block w-50" alt="...">
           </div>
           <div class="carousel-item">
-            <img src="./images/c2.png" class="d-block w-100" alt="...">
+            <img src="./images/c2.png" class="d-block w-50" alt="...">
           </div>
           <div class="carousel-item">
-            <img src="./images/c3.png" class="d-block w-100" alt="...">
+            <img src="./images/c3.png" class="d-block w-50" alt="...">
           </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
@@ -180,6 +180,7 @@
         </button>
       </div>
 
+      
     <hr class="lineaRoja">
 
     <!-- ULTIMAS NOTICIAS -->
@@ -191,23 +192,29 @@
     <div class="container">
     <section class="row d-flex justify-content-center m-0">
 
-  <article class="cardNoticias cardNoticias__1 col-md-3"> 
+  <!-- NOTICIA 1 IMAGEN -->
+  <a href="./pages/noticias/incendio-en-una-fábrica-de-pintura.html" class="cardNoticias cardNoticias__1 col-md-3"
+  style="background-image: url(./images/mafer-techo.webp)">
     <h3 class="cardNoticias__titulo d-flex">
-      Noticia de un incendio
+      <span class="CardNoticias__titulo--background"> Incendio en un depósito de pintura </span>
     </h3>
-  </article>
+  </a>
+  <!-- NOTICIA 2 -->
 
-    <article class="cardNoticias cardNoticias__2 col-md-3"> 
-      <h3 class="cardNoticias__titulo d-flex">
-        Apertura de la academia de bomberos
-      </h3>
-    </article>
-
-    <article class="cardNoticias cardNoticias__3 col-md-3"> 
-      <h3 class="cardNoticias__titulo d-flex">
-        Noticia de rescate
-      </h3>
-    </article>
+  <a href="./pages/noticias/abrio-la-convocatoria-para-ingresar-a-bomberos.html" class="cardNoticias cardNoticias__2 col-md-3"
+  style="background-image: url(./images/rio-grupal.webp)">
+    <h3 class="cardNoticias__titulo d-flex">
+      <span class="CardNoticias__titulo--background"> Abrió la convocatoria para ingresar a bomberos </span>
+    </h3>
+  </a>
+  <!-- NOTICIA 3 -->
+  
+  <a href="./pages/noticias/rescate-en-panamericana.html" class="cardNoticias cardNoticias__3 col-md-3"
+  style="background-image: url(./images/choque-panamericana.webp)">
+    <h3 class="cardNoticias__titulo d-flex">
+      <span class="CardNoticias__titulo--background"> Choque y rescate en Panamericana </span>
+    </h3>
+  </a>
 
   </section>
 </div>
@@ -245,62 +252,53 @@
       </div>
 
     
-    <!-- FOOTER -->
+<!-- FOOTER -->
     
-    <footer class="footer">
-  <!-- redes -->
+<footer class="footer">
+  
+  <!-- REDES -->
   <div class="footer__redes w-100">
     <div class="d-flex justify-content-center ">
       <a href="https://www.facebook.com/profile.php?id=100064731274643"><i class="footer__redes--icono bi bi-facebook"></i></a>
       <a href="https://www.instagram.com/bomberosvicentelopez/"><i class="footer__redes--icono bi bi-instagram"></i></a>
     </div>
   </div>
-  <!-- centro -->
+  <!-- CENTRO -->
 
   <div class="row d-flex justify-content-center">
-        <div class="col-sm-12 col-md-6 d-flex flex-sm-row flex-md-column align-items-center justify-content-evenly">
-          <h4 class="footer__bomberos col-6 d-flex align-items-center justify-content-center">BOMBEROS VOLUNTARIOS</h4>
-          <p class="footer__bomberos--texto col-6 d-flex align-items-center">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, sed!
-          </p>
+    <div class="col-sm-12 col-md-6 d-flex flex-sm-row flex-md-column align-items-center justify-content-evenly">
+      <h4 class="footer__bomberos col-6 d-flex align-items-center justify-content-center">BOMBEROS VOLUNTARIOS</h4>
+      <p class="footer__bomberos--texto col-6 d-flex align-items-center">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, sed!
+      </p>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-6 d-flex">
+        <div class="footer__contacto col-4 d-flex flex-column align-items-center">
+          <span class="footer__contacto--icono material-icons">&#xe0cd;</span>
+          <div>
+            <p class="footer__contacto--textoPrincipal">Emergencias</p>
+            <p class="footer__contacto--texto">4795-2222</p>
+          </div>
         </div>
-
-
-        <div class="row justify-content-center">
-        <div class="col-12 col-md-6 d-flex">
-
-            
-          <div class="footer__contacto col-4 d-flex flex-column align-items-center">
-            <span class="footer__contacto--icono material-icons">&#xe0cd;</span>
-            <div>
-              <p class="footer__contacto--textoPrincipal">Emergencias</p>
-              <p class="footer__contacto--texto">4795-2222</p>
-            </div>
+        <div class="footer__contacto col-4 d-flex flex-column align-items-center">
+          <span class="footer__contacto--icono material-icons">&#xe0cd;</span>
+          <div>
+            <p class="footer__contacto--textoPrincipal">Administración</p>
+            <p class="footer__contacto--texto">4795-2002</p>
           </div>
-        
-        
-          <div class="footer__contacto col-4 d-flex flex-column align-items-center">
-            <span class="footer__contacto--icono material-icons">&#xe0cd;</span>
-            <div>
-              <p class="footer__contacto--textoPrincipal">Administración</p>
-              <p class="footer__contacto--texto">4795-2002</p>
-            </div>
+        </div>
+        <div class="footer__contacto col-4 d-flex flex-column align-items-center">
+          <span class="footer__contacto--icono material-icons">&#xea40;</span>
+          <div>
+            <p class="footer__contacto--textoPrincipal">Av. Maipu 1669</p>
+            <p class="footer__contacto--texto"> Vicente López</p>
           </div>
-        
-          <div class="footer__contacto col-4 d-flex flex-column align-items-center">
-            <span class="footer__contacto--icono material-icons">&#xea40;</span>
-            <div>
-              <p class="footer__contacto--textoPrincipal">Av. Maipu 1669</p>
-              <p class="footer__contacto--texto"> Vicente López</p>
-            </div>
-          </div>
-        
-
-
-
+        </div>
+      </div>
+    </div>
+  </div>
 </footer>
-
-
 
     <!-- BOOTSTRAP -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>

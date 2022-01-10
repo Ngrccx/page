@@ -22,8 +22,10 @@ a, a:hover, a:focus, a:active {
     font-family: $fuenteprincipal;
     font-weight: $semi-bold;
     color: white;
-
-
+}
+.navbarPages {
+@extend .navbar;
+background-color: $negro;
 }
 .boton-nav {
     background-color: transparent;
@@ -220,14 +222,6 @@ a, a:hover, a:focus, a:active {
 /// IMAGENES DE LAS TARJETAS
 .cardNoticias {
     @include cardsNoticias();
-    transition: 0.3s;
-    &__principal {background-image: url(../images/constituyentes-julian.webp)}
-    &__1 {background-image: url(../images/rio-ataque.webp)}
-    &__2 {background-image: url(../images/rio-grupal.webp)}
-    &__3 {background-image: url(../images/constituyentes-julian.webp)}
-    &__4 {background-image: url(../images/rio-ataque.webp)}
-    &__5 {background-image: url(../images/rio-grupal.webp)}
-    &__6 {background-image: url(../images/rio-ataque.webp)}
     &:before {
         @include cardsNoticias__before();
     }
@@ -304,7 +298,7 @@ a, a:hover, a:focus, a:active {
 
 .nota {
     &__imagenPrincipal {
-        margin-top: 3rem;
+        margin: 1rem 0rem;
         width: 100%;
         height: 40vh;
         background-repeat: no-repeat;
@@ -320,21 +314,24 @@ a, a:hover, a:focus, a:active {
     }
     &__titulo {
         @include titulos-secciones;
+        margin-top: 0rem;
     }
     &__fecha {
         font-size: 0.8rem;
         color: $rojo;
-        font-weight: $regular;
+        font-weight: $bold;
+        text-align: end;
+        margin-top: 1rem;
     }
     &__subtitulo {
-        font-size: 1.5rem;
-        font-weight: $semi-bold;
-        text-align: center;
+        font-size: 1rem;
+        font-weight: $medium;
+        text-align: left;
     }
 }
 
 
-
+// SIN USAR
 .header {
     height: 40%;
     width: 100%;
@@ -351,11 +348,11 @@ a, a:hover, a:focus, a:active {
 
 
 
-// HERO INDEX
+// HERO - BANNERS
 .bannerPages {
     position: relative;
     width: 100%;
-    height: 50vh;
+    height: 40vh;
     background-image: url(../images/fabrica-mariano.webp);
     background-position: 75% center ;
     background-repeat: no-repeat;
@@ -377,9 +374,10 @@ a, a:hover, a:focus, a:active {
             position: absolute;
             text-align: center;
             font-family: $fuenteprincipal;
-            font-size: 1rem;
+            font-size: 1.5rem;
             font-weight: $extra-bold;
             color: $blanco;
+            text-align: center;
                 &--img {
                     height: 10rem;
                     padding-bottom: 1rem;
@@ -396,3 +394,103 @@ a, a:hover, a:focus, a:active {
     .navbar-quieroserbombero {
         background-color: $negro;
     }
+    .navbar-noticias {
+        background-color: $negro
+    }
+
+.articulo {
+    &__titulo {
+        @include titulos-secciones;
+        margin-bottom: 1.5rem
+    }
+    &__parrafo {
+        @include parrafos-secciones;
+        &--resaltado {
+            @include parrafos-secciones;
+            background: $amarillo;
+            text-align: center;
+            color: $negro;
+            font-weight: $bold;
+        }
+    }
+}
+
+
+
+.separadorIngreso {
+    @include separadorParallax;
+    height: 30vh;
+    background-image: url(../images/rio-grupal.webp)
+}
+.articulo {
+    background-color: $negro;
+    padding: 1rem 0px;
+    color: white;
+}
+
+.ingresoCard {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    &__titulo {
+        @include titulos-secciones;
+        font-size: 1.5rem;
+        text-align: center;
+    }   
+    &__subtitulo {
+    text-align: center;
+    }
+    &__parrafo {
+        @include parrafos-secciones;
+        text-align: center;
+    }
+    &__imagen {
+        max-width: 50%;
+        color: white;
+        margin-bottom: 2rem;
+    }
+    &__lista {
+        @include parrafos-secciones;
+        list-style: none;
+        font-weight: $medium;
+        text-align: left;
+        margin-top: 1rem;
+    }
+}
+
+.formularioIngreso {
+    background-color: $negro;
+    margin-top: 2rem;
+    border-top: 1rem;
+    border-top-color: $rojo;
+    border-top-style: solid;
+    border-bottom: 1rem;
+    border-bottom-color: $rojo;
+    border-bottom-style: solid;
+    &__titulo {
+        background-color: $amarillo;
+        font-family: $fuenteprincipal;
+        font-size: 1rem;
+        font-weight: $bold;
+        color: $negro;
+        padding: 0.3rem;
+        margin: 2rem 0rem;
+    }
+}
+
+.form-label {
+    font-family: $fuenteprincipal;
+    color: white;
+    font-weight: $medium;
+}
+
+.form-check-label {
+    @extend .form-label
+}
+
+.form-control {
+    margin-bottom: 2rem;
+
+}
