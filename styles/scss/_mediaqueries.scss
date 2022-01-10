@@ -1,0 +1,25 @@
+/// INDEX
+
+// MEDIA MEDIUM
+@media (min-width: 786px) , (orientation: landscape) { 
+    .separadorContador {
+        background-image: url(../images/incendiopachecohorizontal.png);
+    }
+
+}
+
+// MEDIA LARGE
+@media (min-width: 768px) {
+    .hero-index {
+        color: white;
+    }
+    &__titulo {
+        font-size: 2rem;
+        &--img {
+            height: 15rem;
+        }
+        &--inferior {
+            font-size: 1.5rem;
+        }
+    }
+}

@@ -1,0 +1,123 @@
+/////////// MIXIN /////////////
+
+/// TITULO + PARRAFO ///
+
+@mixin titulos-secciones {
+    font-size: 1.5rem;
+    font-weight: $black;
+    text-align: center;
+    margin-top: 1.5rem;
+    padding: 0px 5%;
+    align-items: center;
+}
+
+@mixin parrafos-secciones {
+    font-weight: $semi-bold;
+    font-size: 1rem;
+    margin-bottom: 3rem;
+    margin-left: 20%;
+    margin-right: 20%;
+    text-align: center;
+}
+
+/// PARALLAX ///
+@mixin separadorParallax {
+    height: 50vh;
+    background-attachment: fixed;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: white;
+}
+
+/// TARJETAS ///
+@mixin cardsNoticias {
+    position: relative;
+    min-height: 15rem;
+    min-width: 20rem;
+    margin: 2rem 1rem;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+@mixin cardsNoticias__titulo {
+        position: absolute;
+        background: $amarillo;
+        color: $negro;
+        font-size: 1rem;
+        font-weight: $bold;
+        text-align: center;
+        padding: 3px;
+        margin-bottom: 1rem;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+@mixin cardsNoticias__before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0), $negro 90%);
+}
+
+/// BOTONES ///
+@mixin botonPrincipal {
+    border-radius: 5px;
+    padding: 0.5em 1em;
+    background-color: transparent;
+    transition: all 0.5s ease;
+    cursor:pointer;
+    border: none;
+    color: rgb(17, 16, 16);
+    background: linear-gradient(to left, $amarillo 50%, $rojo 50%);
+    background-size: 250% 100%;
+    background-position: right bottom;
+    font-weight:$bold;
+}
+
+@mixin botonSecundario {
+    border-radius: 5px;
+    padding: 0.5em 1em;
+    background-color: transparent;
+    transition: all 0.5s ease;
+    cursor:pointer;
+    border: none;
+    color: white;
+    background: linear-gradient(to left, $negro 50%, rgb(100, 100, 100) 50%);
+    background-size: 250% 100%;
+    background-position: right bottom;
+    font-weight: $bold;
+}
+
+@mixin botonSeguirLeyendo {
+    padding: 0.2em 0.5em;
+    margin: 1rem;
+    border: none;
+    color: rgb(255, 255, 255);
+    background: linear-gradient(to left, #eb0e0eb9 50%, #eb0e0e 50%);
+    background-size: 250% 100%;
+    background-position: right bottom;
+}
+
+@mixin botones--hover {
+    background-position: left bottom;
+    outline: 0;
+}
+
+///SEPARADOR///
+@mixin separadorbr {
+    border: 0.2rem solid $rojo;
+    background-color: $rojo;
+    opacity: 1;
+    width: 50%;
+    margin: auto;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}

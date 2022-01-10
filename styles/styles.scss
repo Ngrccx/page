@@ -1,0 +1,398 @@
+@import '../styles/scss/variables';
+@import '../styles/scss/mixin';
+
+
+
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+//  NAVBAR
+
+
+a, a:hover, a:focus, a:active {
+    text-decoration: none;
+    color: inherit;
+}
+
+.navbar {
+    background-color: $rojo;
+    box-shadow: 0px;
+    font-family: $fuenteprincipal;
+    font-weight: $semi-bold;
+    color: white;
+
+
+}
+.boton-nav {
+    background-color: transparent;
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
+    color: white;
+    &--icono {
+        font-size: 2.5rem;
+        font-weight: bold;
+    }
+}
+
+.nav-link {
+    color: white;
+}
+
+.navbar-brand {
+    color: white;
+    text-decoration: none;
+        &:hover {
+        color: white;
+        text-decoration: none;
+        }
+}
+
+.navbar-collapse {
+    z-index:2;
+}
+
+
+
+  // HERO INDEX
+    .hero-index {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url(../images/fabrica-mariano.webp);
+    background-position: 75% center ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &:before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: linear-gradient($rojo 10%, rgba(255, 97, 76, 0.63), $rojo 90%);
+    }
+        &__titulo {
+            position: absolute;
+            text-align: center;
+            font-family: $fuenteprincipal;
+            font-size: 1rem;
+            font-weight: $extra-bold;
+            color: $blanco;
+                &--img {
+                    height: 10rem;
+                    padding-bottom: 1rem;
+                }
+                &--inferior{
+                font-size: 1rem;
+                font-weight: $semi-bold;
+                padding: 1rem 0rem;
+                color: rgb(230, 230, 230)
+                }
+            }
+    }
+
+
+// CONTADOR
+
+.separadorContador {
+    background-color: $rojo;
+    height: 80vh;
+    background-image: url(../images/incendioPacheco-vector-vertical.png);
+    background-position: bottom center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.contador {
+    font-family: $fuenteprincipal;
+    background-color: $negro;
+    &__titulo {
+
+        &--texto {    
+        color: $negro;
+        text-align: center;
+        display: inline;
+        background-color: tomato;
+        }
+    }
+    &__main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        padding: 0px;
+        margin: 0px;
+        text-align: center;
+        &--icono {
+            font-size: 3rem;
+            color: $rojo;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+        &--numero {
+            color: white;
+            margin: 0rem;
+            font-size: 1.5rem;
+            font-weight: $bold
+            
+        }
+        &--tipo {
+            color: white;
+            font-size: 0.8rem;
+            font-weight: $semi-bold
+        }
+    }
+}
+
+
+// SEPARADOR PARALLAX
+
+.parllaxVoluntarios{
+    @include separadorParallax();
+    background-image: url(../images/constituyentes-abrazo.webp);
+}
+
+
+
+
+// LINEA ROJA
+
+.lineaRoja {
+@include separadorbr();
+    
+}
+
+
+// VOLUNTARIOS
+
+
+
+
+.voluntarios {
+    &__titulo {
+        @include titulos-secciones();
+    }
+    &__parrafo {
+        @include parrafos-secciones();
+    }
+    &__quienes {
+        @include parrafos-secciones();
+    }
+}
+
+// BOTONES
+
+    .botones__secundario {
+        @include botonSecundario();
+            &:hover {
+                @include botones--hover;
+            }
+    }
+
+    .botones__principal {
+        @include botonPrincipal();
+        &:hover {
+            @include botones--hover;
+                }
+        }
+
+        .botones__noticias {
+            @include botonSeguirLeyendo();
+            &:hover {
+                @include botones--hover;
+            }
+        }
+
+/// ULTIMAS NOTICIAS
+
+.ultimasNoticias {
+    @include titulos-secciones();
+    background-color: $amarillo;
+}
+
+/// IMAGENES DE LAS TARJETAS
+.cardNoticias {
+    @include cardsNoticias();
+    transition: 0.3s;
+    &__principal {background-image: url(../images/constituyentes-julian.webp)}
+    &__1 {background-image: url(../images/rio-ataque.webp)}
+    &__2 {background-image: url(../images/rio-grupal.webp)}
+    &__3 {background-image: url(../images/constituyentes-julian.webp)}
+    &__4 {background-image: url(../images/rio-ataque.webp)}
+    &__5 {background-image: url(../images/rio-grupal.webp)}
+    &__6 {background-image: url(../images/rio-ataque.webp)}
+    &:before {
+        @include cardsNoticias__before();
+    }
+
+    &__titulo {
+        @include cardsNoticias__titulo();
+    }
+}
+
+
+
+
+.footer {
+    background-color: $negro;
+    padding-bottom: 1rem;
+    margin-top: 3rem;
+    padding-bottom: 3rem;
+    
+    &__bomberos {
+        font-size: 1rem;
+        padding: 1rem 0px;
+        color: white;
+        border-bottom: 4px solid $rojo;
+        text-align: center;
+        padding:3rem 0rem;
+        margin-bottom: 4rem;
+    
+        &--texto{
+            color: white;
+            word-wrap: break-word;
+            text-align: center;
+        }
+    }
+    &__contacto {
+        &--icono{
+            color: $rojo;
+            
+        }
+
+        &--textoPrincipal {
+            color: white;
+            font-size: 0.8rem;
+            font-weight: $semi-bold;
+            text-align: center;
+            margin: 0;
+        }
+        &--texto {
+            color: white;
+                font-size: 0.8rem;
+                font-weight: $medium;
+                text-align: center;
+                margin: 0;
+        }
+    }
+    &__redes {
+        background: $rojo;
+        &--seguinos {
+            font-family: $fuenteprincipal;
+            font-weight: bold;
+        }
+        &--icono {
+            color: white;
+            text-decoration: none;
+            padding: 1rem 1rem;
+            
+        }
+    }
+}  
+
+@import '../styles/scss/mediaqueries';
+
+
+
+
+.nota {
+    &__imagenPrincipal {
+        margin-top: 3rem;
+        width: 100%;
+        height: 40vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+    }
+    &__imagenSecundaria {
+        margin-top: 3rem;
+        width: 100%;
+        height: 40vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    &__titulo {
+        @include titulos-secciones;
+    }
+    &__fecha {
+        font-size: 0.8rem;
+        color: $rojo;
+        font-weight: $regular;
+    }
+    &__subtitulo {
+        font-size: 1.5rem;
+        font-weight: $semi-bold;
+        text-align: center;
+    }
+}
+
+
+
+.header {
+    height: 40%;
+    width: 100%;
+    background-color: $rojo;
+    display: flex;
+    justify-content: center;
+    &__titulo {
+        color: white;
+        font-size: 3rem;
+        font-weight: bold;
+    }
+}
+
+
+
+
+// HERO INDEX
+.bannerPages {
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    background-image: url(../images/fabrica-mariano.webp);
+    background-position: 75% center ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &:before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: linear-gradient($negro 10%, rgba(26, 25, 25, 0.50), $negro 90%);
+    }
+        &__titulo {
+            position: absolute;
+            text-align: center;
+            font-family: $fuenteprincipal;
+            font-size: 1rem;
+            font-weight: $extra-bold;
+            color: $blanco;
+                &--img {
+                    height: 10rem;
+                    padding-bottom: 1rem;
+                }
+                &--inferior{
+                font-size: 1rem;
+                font-weight: $semi-bold;
+                padding: 1rem 0rem;
+                color: rgb(230, 230, 230)
+                }
+            }
+    }
+
+    .navbar-quieroserbombero {
+        background-color: $negro;
+    }
