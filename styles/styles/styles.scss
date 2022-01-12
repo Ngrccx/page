@@ -1,0 +1,490 @@
+@import '../styles/scss/variables';
+@import '../styles/scss/mixin';
+
+
+
+//  NAVBAR
+
+a, a:hover, a:focus, a:active {
+    text-decoration: none;
+    color: inherit;
+}
+
+.navbar {
+    background-color: $rojo;
+    box-shadow: 0px;
+    font-family: $fuenteprincipal;
+    font-weight: $semi-bold;
+    color: white;
+}
+.navbarPages {
+@extend .navbar;
+background-color: $negro;
+}
+.boton-nav {
+    background-color: transparent;
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
+    color: white;
+    z-index: 2;
+    &--icono {
+        font-size: 2.5rem;
+        font-weight: bold;
+    }
+}
+
+.nav-link {
+    color: white;
+}
+
+.navbar-brand {
+    color: white;
+    text-decoration: none;
+        &:hover {
+        color: white;
+        text-decoration: none;
+        }
+}
+
+.navbar-collapse {
+    z-index:2;
+}
+
+
+
+  // HERO INDEX
+    .hero-index {
+    @include banner();
+    height: 100vh;
+    background-image: url(../images/fabrica-mariano.webp);
+    background-position: 75% center ;
+    align-items: center;
+    &:before {
+        @include banner__before();
+        background: linear-gradient($rojo 10%, rgba(255, 97, 76, 0.63), $rojo 90%);
+        }
+        &__titulo {
+            @include banner__titulo();
+            font-size: 1rem;
+                &--img {
+                    height: 10rem;
+                    padding-bottom: 1rem;
+                }
+                &--inferior{
+                @include banner__titulo--inferior();
+                }
+            }
+    }
+
+
+// CONTADOR
+
+.separadorContador {
+    background-color: $rojo;
+    height: 80vh;
+    background-image: url(../images/incendioPacheco-vector-vertical.png);
+    background-position: bottom center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.contador {
+    font-family: $fuenteprincipal;
+    background-color: $negro;
+    &__titulo {
+
+        &--texto {    
+        color: $negro;
+        text-align: center;
+        display: inline;
+        background-color: tomato;
+        }
+    }
+    &__main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        padding: 0px;
+        margin: 0px;
+        text-align: center;
+        &--icono {
+            font-size: 3rem;
+            color: $rojo;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+        &--numero {
+            color: white;
+            margin: 0rem;
+            font-size: 1.5rem;
+            font-weight: $bold
+            
+        }
+        &--tipo {
+            color: white;
+            font-size: 0.8rem;
+            font-weight: $semi-bold
+        }
+    }
+}
+
+
+// SEPARADOR PARALLAX
+
+.parallaxVoluntarios{
+    @include separadorParallax();
+    background-image: url(../images/constituyentes-M65.webp);
+}
+
+
+
+
+// LINEA ROJA
+
+.lineaRoja {
+@include separadorbr();
+    
+}
+
+
+// VOLUNTARIOS
+
+.voluntarios {
+    margin: 3rem 0px;
+    &__titulo {
+        @include titulos-secciones();
+    }
+    &__parrafo {
+        @include parrafos-secciones();
+    }
+    &__quienes {
+        @include parrafos-secciones();
+    }
+}
+
+// BOTONES
+
+    .botones__secundario {
+        @include botonSecundario();
+            &:hover {
+                @include botones--hover;
+            }
+    }
+
+    .botones__principal {
+        @include botonPrincipal();
+        &:hover {
+            @include botones--hover;
+                }
+        }
+
+        .botones__noticias {
+            @include botonSeguirLeyendo();
+            &:hover {
+                @include botones--hover;
+            }
+        }
+
+/// ULTIMAS NOTICIAS
+
+.ultimasNoticias {
+    @include titulos-secciones();
+    background-color: $amarillo;
+}
+
+/// IMAGENES DE LAS TARJETAS
+.cardNoticias {
+    @include cardsNoticias();
+    &:before {
+        @include cardsNoticias__before();
+    }
+
+    &__titulo {
+        @include cardsNoticias__titulo();
+    }
+}
+
+
+
+
+.footer {
+    background-color: $negro;
+    padding-bottom: 1rem;
+    margin-top: 3rem;
+    padding-bottom: 3rem;
+    
+    &__bomberos {
+        font-size: 1rem;
+        padding: 1rem 0px;
+        color: white;
+        border-bottom: 4px solid $rojo;
+        text-align: center;
+        padding:3rem 0rem;
+        margin-bottom: 4rem;
+    
+        &--texto{
+            color: white;
+            word-wrap: break-word;
+            text-align: center;
+        }
+    }
+    &__contacto {
+        &--icono{
+            color: $rojo;
+            
+        }
+
+        &--textoPrincipal {
+            color: white;
+            font-size: 0.8rem;
+            font-weight: $semi-bold;
+            text-align: center;
+            margin: 0;
+        }
+        &--texto {
+            color: white;
+                font-size: 0.8rem;
+                font-weight: $medium;
+                text-align: center;
+                margin: 0;
+        }
+    }
+    &__redes {
+        background: $rojo;
+        &--seguinos {
+            font-family: $fuenteprincipal;
+            font-weight: bold;
+        }
+        &--icono {
+            color: white;
+            font-size: 1.5rem;
+            text-decoration: none;
+            padding: 1rem 1rem;
+            
+        }
+    }
+}  
+
+@import '../styles/scss/mediaqueries';
+
+
+
+
+.nota {
+    &__imagenPrincipal {
+        margin: 1rem 0rem;
+        width: 100%;
+        height: 40vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+    }
+    &__imagenSecundaria {
+        margin-top: 3rem;
+        width: 100%;
+        height: 40vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    &__titulo {
+        @include titulos-secciones;
+        margin-top: 0rem;
+    }
+    &__fecha {
+        font-size: 0.8rem;
+        color: $rojo;
+        font-weight: $bold;
+        text-align: end;
+        margin-top: 1rem;
+    }
+    &__subtitulo {
+        font-size: 1rem;
+        font-weight: $medium;
+        text-align: left;
+    }
+}
+
+
+
+
+
+/////// BANNER DE PAGINAS 
+////// LAS IMAGENES SE DEFINEN DESDE LA PÁGINA
+
+.bannerPages {
+    @include banner;
+    height: 40vh;
+    &:before {
+        @include banner__before();
+        background: linear-gradient($negro 10%, rgba(26, 25, 25, 0.50), $negro 90%);
+    }
+    &__titulo {
+        @include banner__titulo();
+        text-align: center;
+            &--inferior{
+            @include banner__titulo--inferior();
+        }
+    }
+}
+
+
+
+
+.articulo {
+    &__titulo {
+        @include titulos-secciones;
+        margin-bottom: 1.5rem
+    }
+    &__parrafo {
+        @include parrafos-secciones;
+        margin-top: 1rem;
+        &--resaltado {
+            @include parrafos-secciones;
+            background: $amarillo;
+            text-align: center;
+            color: $negro;
+            font-weight: $bold;
+            margin-bottom: 500px
+        }
+    }
+}
+
+
+
+.separadorIngreso {
+    @include separadorParallax;
+    height: 30vh;
+    background-image: url(../images/rio-grupal.webp)
+}
+.articulo {
+    background-color: $negro;
+    padding: 1rem 0px;
+    color: white;
+}
+
+.ingresoCard {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    &__titulo {
+        @include titulos-secciones;
+        font-size: 1.5rem;
+        text-align: center;
+    }   
+    &__subtitulo {
+    text-align: center;
+    }
+    &__parrafo {
+        @include parrafos-secciones;
+        text-align: center;
+    }
+    &__imagen {
+        max-width: 50%;
+        color: white;
+        margin-bottom: 2rem;
+    }
+    &__lista {
+        @include parrafos-secciones;
+        list-style: none;
+        font-weight: $medium;
+        text-align: left;
+        margin-top: 1rem;
+    }
+}
+
+.formularioIngreso {
+    background-color: $negro;
+    margin-top: 2rem;
+    border-top: 1rem;
+    border-top-color: $rojo;
+    border-top-style: solid;
+    border-bottom: 1rem;
+    border-bottom-color: $rojo;
+    border-bottom-style: solid;
+    &__titulo {
+        background-color: $amarillo;
+        font-family: $fuenteprincipal;
+        font-size: 1rem;
+        font-weight: $bold;
+        color: $negro;
+        padding: 0.3rem;
+        margin: 2rem 0rem;
+    }
+}
+
+.form-check-label {
+    @extend .form-label
+}
+
+.form-control {
+    margin-bottom: 2rem;
+
+}
+
+.form-label {
+    font-family: $fuenteprincipal;
+    color: white;
+    font-weight: $medium;
+}
+.parallaxNosotros {
+    @include separadorParallax();
+    background-image: url(../images/jumbo-facutoth.webp) ;
+}
+
+
+
+
+
+
+
+// MEDIA MEDIUM + LANDSCAPE
+    @media (min-width: 768px) and (orientation: landscape) { 
+    .formularioIngreso {
+        width: 50%;
+        border-radius: 10px;
+    }
+  
+    }
+
+// MEDIUM
+@media (min-width: 768px) {
+    .separadorContador {
+        background-image: url(../images/incendiopachecohorizontal.png);
+        }
+    .parallaxVoluntarios {
+    height: 70vh
+    }
+    .bannerPages__titulo {
+        font-size: 4rem;
+    }
+    .parallaxNosotros {
+        height: 60vh;
+    }
+}
+
+
+// MEDIA LARGE
+@media (min-width: 768px) {
+    .ingresoCard__imagen {
+        max-width: 20rem;
+    }
+    .separadorIngreso {
+        height: 50vh;
+    }
+    .ingresoCard{
+        margin: 5% 20%
+    }
+    .separadorNosotros {
+        height: 50vh;
+    }
+    .hero-index__titulo--superior{
+    font-size: 2rem;
+    }
+    .parallaxNosotros {
+        height: 50vh;
+    }
+}
