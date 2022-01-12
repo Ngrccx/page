@@ -3,13 +3,7 @@
 
 
 
-
-* {
-    margin: 0px;
-    padding: 0px;
-}
 //  NAVBAR
-
 
 a, a:hover, a:focus, a:active {
     text-decoration: none;
@@ -33,6 +27,7 @@ background-color: $negro;
     margin: 0px;
     padding: 0px;
     color: white;
+    z-index: 2;
     &--icono {
         font-size: 2.5rem;
         font-weight: bold;
@@ -60,42 +55,24 @@ background-color: $negro;
 
   // HERO INDEX
     .hero-index {
-    position: relative;
-    width: 100%;
+    @include banner();
     height: 100vh;
     background-image: url(../images/fabrica-mariano.webp);
     background-position: 75% center ;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
     &:before {
-        content: "";
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        right: 0;
+        @include banner__before();
         background: linear-gradient($rojo 10%, rgba(255, 97, 76, 0.63), $rojo 90%);
-    }
+        }
         &__titulo {
-            position: absolute;
-            text-align: center;
-            font-family: $fuenteprincipal;
+            @include banner__titulo();
             font-size: 1rem;
-            font-weight: $extra-bold;
-            color: $blanco;
                 &--img {
                     height: 10rem;
                     padding-bottom: 1rem;
                 }
                 &--inferior{
-                font-size: 1rem;
-                font-weight: $semi-bold;
-                padding: 1rem 0rem;
-                color: rgb(230, 230, 230)
+                @include banner__titulo--inferior();
                 }
             }
     }
@@ -156,9 +133,9 @@ background-color: $negro;
 
 // SEPARADOR PARALLAX
 
-.parllaxVoluntarios{
+.parallaxVoluntarios{
     @include separadorParallax();
-    background-image: url(../images/constituyentes-abrazo.webp);
+    background-image: url(../images/constituyentes-M65.webp);
 }
 
 
@@ -175,6 +152,7 @@ background-color: $negro;
 // VOLUNTARIOS
 
 .voluntarios {
+    margin: 3rem 0px;
     &__titulo {
         @include titulos-secciones();
     }
@@ -281,6 +259,7 @@ background-color: $negro;
         }
         &--icono {
             color: white;
+            font-size: 1.5rem;
             text-decoration: none;
             padding: 1rem 1rem;
             
@@ -328,72 +307,30 @@ background-color: $negro;
 }
 
 
-// SIN USAR
-.header {
-    height: 40%;
-    width: 100%;
-    background-color: $rojo;
-    display: flex;
-    justify-content: center;
+
+
+
+/////// BANNER DE PAGINAS 
+////// LAS IMAGENES SE DEFINEN DESDE LA PÁGINA
+
+.bannerPages {
+    @include banner;
+    height: 40vh;
+    &:before {
+        @include banner__before();
+        background: linear-gradient($negro 10%, rgba(26, 25, 25, 0.50), $negro 90%);
+    }
     &__titulo {
-        color: white;
-        font-size: 3rem;
-        font-weight: bold;
+        @include banner__titulo();
+        text-align: center;
+            &--inferior{
+            @include banner__titulo--inferior();
+        }
     }
 }
 
 
 
-
-// HERO - BANNERS
-.bannerPages {
-    position: relative;
-    width: 100%;
-    height: 40vh;
-    background-image: url(../images/fabrica-mariano.webp);
-    background-position: 75% center ;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    &:before {
-        content: "";
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        right: 0;
-        background: linear-gradient($negro 10%, rgba(26, 25, 25, 0.50), $negro 90%);
-    }
-        &__titulo {
-            position: absolute;
-            text-align: center;
-            font-family: $fuenteprincipal;
-            font-size: 1.5rem;
-            font-weight: $extra-bold;
-            color: $blanco;
-            text-align: center;
-                &--img {
-                    height: 10rem;
-                    padding-bottom: 1rem;
-                }
-                &--inferior{
-                font-size: 1rem;
-                font-weight: $semi-bold;
-                padding: 1rem 0rem;
-                color: rgb(230, 230, 230)
-                }
-            }
-    }
-
-    .navbar-quieroserbombero {
-        background-color: $negro;
-    }
-    .navbar-noticias {
-        background-color: $negro
-    }
 
 .articulo {
     &__titulo {
@@ -402,12 +339,14 @@ background-color: $negro;
     }
     &__parrafo {
         @include parrafos-secciones;
+        margin-top: 1rem;
         &--resaltado {
             @include parrafos-secciones;
             background: $amarillo;
             text-align: center;
             color: $negro;
             font-weight: $bold;
+            margin-bottom: 500px
         }
     }
 }
@@ -477,12 +416,6 @@ background-color: $negro;
     }
 }
 
-.form-label {
-    font-family: $fuenteprincipal;
-    color: white;
-    font-weight: $medium;
-}
-
 .form-check-label {
     @extend .form-label
 }
@@ -490,4 +423,68 @@ background-color: $negro;
 .form-control {
     margin-bottom: 2rem;
 
+}
+
+.form-label {
+    font-family: $fuenteprincipal;
+    color: white;
+    font-weight: $medium;
+}
+.parallaxNosotros {
+    @include separadorParallax();
+    background-image: url(../images/jumbo-facutoth.webp) ;
+}
+
+
+
+
+
+
+
+// MEDIA MEDIUM + LANDSCAPE
+    @media (min-width: 768px) and (orientation: landscape) { 
+    .formularioIngreso {
+        width: 50%;
+        border-radius: 10px;
+    }
+  
+    }
+
+// MEDIUM
+@media (min-width: 768px) {
+    .separadorContador {
+        background-image: url(../images/incendiopachecohorizontal.png);
+        }
+    .parallaxVoluntarios {
+    height: 70vh
+    }
+    .bannerPages__titulo {
+        font-size: 4rem;
+    }
+    .parallaxNosotros {
+        height: 60vh;
+    }
+}
+
+
+// MEDIA LARGE
+@media (min-width: 768px) {
+    .ingresoCard__imagen {
+        max-width: 20rem;
+    }
+    .separadorIngreso {
+        height: 50vh;
+    }
+    .ingresoCard{
+        margin: 5% 20%
+    }
+    .separadorNosotros {
+        height: 50vh;
+    }
+    .hero-index__titulo--superior{
+    font-size: 2rem;
+    }
+    .parallaxNosotros {
+        height: 50vh;
+    }
 }
