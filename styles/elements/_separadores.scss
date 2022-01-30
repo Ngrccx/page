@@ -1,0 +1,11 @@
+// LINEA ROJA
+.separadorParallax {
+    @include efectoParallax;
+    height: 30vh;
+}
+
+// LINEA ROJA
+
+.lineaRoja {
+    @include separadorbr();
+    }

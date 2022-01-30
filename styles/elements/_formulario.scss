@@ -1,0 +1,36 @@
+.formulario {
+    background-color: $negro;
+    margin-top: 2rem;
+    border-top: 1rem;
+    border-top-color: $rojo;
+    border-top-style: solid;
+    border-bottom: 1rem;
+    border-bottom-color: $rojo;
+    border-bottom-style: solid;
+    &__titulo {
+        background-color: $amarillo;
+        font-family: $fuenteprincipal;
+        font-size: 1rem;
+        font-weight: $bold;
+        color: $negro;
+        padding: 0.3rem;
+        margin: 2rem 0rem;
+    }
+}
+
+
+
+.form-control {
+    margin-bottom: 2rem;
+
+}
+
+.form-label {
+    font-family: $fuenteprincipal;
+    color: white;
+    font-weight: $medium;
+}
+
+.form-check-label {
+    @extend .form-label
+}

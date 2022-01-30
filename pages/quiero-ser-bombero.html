@@ -73,42 +73,47 @@
         INGRESO A BOMBEROS VOLUNTARIOS
         </h2>
         <p class="articulo__parrafo"> Existen dos cuerpos dentro de los bomberos voluntarios</p>
-        <span class="articulo__parrafo--resaltado">CUERPO ACTIVO</span>
-        <p class="articulo__parrafo"> Compuesto estrictamente por bomberos, son quienes se encargan de las intervenciones en emergencias, incendios y rescates. Para ingresar a este cuerpo es necesario egresarse de la Academia de Bomberos.</p>
-        <span class="articulo__parrafo--resaltado">CUERPO AUXILIAR</span>
-        <p class="articulo__parrafo"> Compuesto por miembros que por formación o actividad profesional pueden brindar servicios auxiliares a la institución. No pueden intervenir directamente en la prestación de servicios de emergencia. Sus actividades pueden ser de las más diversas como psicologos, medicos, nutricionistas, diseñadores, fotógrafos, etc.</p>
-        </div class="articulo__botones">
+        <div class="row">
+          <div class="col-lg-6">
+            <span class="articulo__parrafo--resaltado">CUERPO ACTIVO</span>
+            <p class="articulo__parrafo"> Compuesto estrictamente por bomberos, son quienes se encargan de las intervenciones en emergencias, incendios y rescates. Para ingresar a este cuerpo es necesario egresarse de la Academia de Bomberos.</p>
+          </div>
+          <div class="col-lg-6">
+            <span class="articulo__parrafo--resaltado">CUERPO AUXILIAR</span>
+            <p class="articulo__parrafo"> Compuesto por miembros que por formación o actividad profesional pueden brindar servicios auxiliares a la institución. No pueden intervenir directamente en la prestación de servicios de emergencia. Sus actividades pueden ser de las más diversas como psicologos, medicos, nutricionistas, diseñadores, fotógrafos, etc.</p>
+          </div>
+        </div>
         </article>
 
     <div class="separadorIngreso"></div>
 
 
 <div class="container">
-<div class="ingresoCard row">
-    <h2 class="ingresoCard__titulo">ACADEMIA DE BOMBEROS</h2>
-    <img class="ingresoCard__imagen" src="../images/escudoAcademia.png" alt="">
-    <h3 class="ingresoCard__subtitulo">Requisitos de Ingreso:</h3>
-        <ul class="ingresoCard__lista">
-            <li>
-                Tener entre 16* y 40 años
-            </li>
-            <li>
-                Tener estudio secundario completo
-            </li>
-            <li>
-                No contar con antecedentes penales
-            </li>
-            <li>
-                Tener domicilio legal dentro de Vicente López
-            </li>
-            <li>
-                Aprobar examenes psico-técnicos
-            </li>
-        </ul>
-    <p class="ingresoCard__parrafo"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet atque facere maiores eveniet, aliquam autem fugit perspiciatis eligendi! Ullam necessitatibus iste aliquam totam exercitationem magnam eos facilis laborum vero numquam!</p>
-    <p class="ingresoCard__parrafo"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea quisquam beatae tempore, repellat commodi molestias est illo magnam deleniti, assumenda suscipit ut, nihil accusamus expedita rem sed non natus dolore nobis illum necessitatibus id unde dolorem. Beatae laborum quod repudiandae?</p>
-</div>
-    
+  <div class="ingresoCard row">
+      <h2 class="ingresoCard__titulo">INGRESO AL CUERPO DE BOMBEROS</h2>
+      <img class="ingresoCard__imagen" src="../images/escudoAcademia.png" alt="">
+      
+      <p class="ingresoCard__parrafo"> La aprobación del curso de ingreso, dictado por la academia de bomberos, es el requisito fundamental para poder pertenecer al cuerpo activo y con ello participar de la prestación del servicio de emergencias. El curso cuenta con módulos tanto teóricos como prácticos</p>
+      <p class="ingresoCard__parrafo"> El curso de ingreso tiene una duración de un año y una vez aprobado es validado por el Sistema Nacional de Bomberos y la Academia Nacional de Bomberos. Por eso, una vez aprobado el curso será reconocido como bombero dentro de todo el sistema nacional de bomberos voluntarios</p>
+  </div>
+  <h3 class="ingresoCard__subtitulo">Requisitos de Ingreso:</h3>
+  <ul class="ingresoCard__lista">
+      <li>
+          Tener entre 16* y 40 años
+      </li>
+      <li>
+          Tener estudio secundario completo
+      </li>
+      <li>
+          No contar con antecedentes penales
+      </li>
+      <li>
+          Tener domicilio legal dentro de Vicente López
+      </li>
+      <li>
+          Aprobar examenes psico-técnicos
+      </li>
+  </ul>
 </div>
 
 <!-- FORMULARIO DE INGRESO -->
@@ -116,13 +121,13 @@
 
 <div class="container">
   <article class="row justify-content-center m-0">
-  <form class="formularioIngreso M-0 row">      
-    <h3 class="d-flex justify-content-center"><span class="formularioIngreso__titulo">FORMULARIO DE INGRESO</span></h3>
-    <div class="mb-3 col-md-12">
+  <form class="formulario M-0 row">      
+    <h3 class="d-flex justify-content-center"><span class="formulario__titulo">SOLICITUD DE INGRESO</span></h3>
+    <div class="mb-3 col-md-6">
         <label for="nombre/es" class="form-label">Nombre</label>
         <input required type="text" class="form-control" id="nombre">
     </div>
-    <div class="mb-3 col-md-12">
+    <div class="mb-3 col-md-6">
         <label for="apellido/os" class="form-label">Apellido</label>
         <input required type="text" class="form-control" id="apellido">
     </div>
@@ -177,11 +182,11 @@
         <input required type="checkbox" class="form-check-input required" id="exampleCheck1">
         <label class="form-check-label" for="">Tengo licencia de conducir</label>
       </div>
-      <div class="mb-3">
+      <div class="mb-3 col-md-6">
         <label class="form-label" for="frenteDni">Frente del DNI</label>
         <input required type="file" class="form-control" id="frenteDni">
       </div>
-      <div class="mb-3">
+      <div class="mb-3 col-md-6">
         <label class="form-label" for="dorsoDni">Dorso del DNI</label>
         <input required type="file" class="form-control" id="dorsoDni">
       </div>
@@ -191,6 +196,12 @@
     </form>
   </div>
 
+  <hr class="lineaRoja">
+  <h2 class="ingresoCard__titulo">INGRESO AL CUERPO AUXILIAR</h2>
+
+  <p class="ingresoCard__parrafo"> El ingreso al cuerpo auxiliar de bomberos no requiere realizar el curso de ingreso. Para pertenecer a este cuerpo basta con solicitar el ingreso mediante una nota dirigida al jefe del cuerpo activo. Luego se realizará una entrevista con la jefatura del cuerpo.</p>
+  <p class="ingresoCard__parrafo"> Es importante tener en cuenta que el cuerpo auxiliar no presta servicios de emergencia, por lo que no participará directamente en las emergencias. Solo el jefe de cuerpo activo puede autorizar su participación de forma auxiliar en un siniestro.</p>
+  <p class="ingresoCard__parrafo"> Para ingresar tenés que comunicarte al teléfono 4795-2002 o al 4795-2222 de lunes a viernes de 8 a 19hs para acordar una entrevista</p>
 <!-- FOOTER -->
     
 <footer class="footer">
@@ -206,9 +217,6 @@
   <div class="row d-flex justify-content-center m-0">
     <div class="col-sm-12 col-md-6 d-flex flex-sm-row flex-md-column align-items-center justify-content-evenly">
       <h4 class="footer__bomberos col-6 d-flex align-items-center justify-content-center">BOMBEROS VOLUNTARIOS</h4>
-      <p class="footer__bomberos--texto col-6 d-flex align-items-center">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, sed!
-      </p>
     </div>
     <div class="row justify-content-center">
       <div class="col-12 col-md-6 d-flex">

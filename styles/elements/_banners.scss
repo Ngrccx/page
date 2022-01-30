@@ -1,0 +1,15 @@
+.bannerPages {
+    @include banner;
+    height: 40vh;
+    &:before {
+        @include banner__before();
+        background: linear-gradient($negro 10%, rgba(26, 25, 25, 0.50), $negro 90%);
+    }
+    &__titulo {
+        @include banner__titulo();
+        text-align: center;
+            &--inferior{
+            @include banner__titulo--inferior();
+        }
+    }
+}

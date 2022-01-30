@@ -1,0 +1,38 @@
+// BOTONES
+
+.botones__secundario {
+    @include botonSecundario();
+        &:hover {
+            @include botones--hover;
+        }
+}
+
+.botones__principal {
+    @include botonPrincipal();
+    &:hover {
+        @include botones--hover;
+            }
+    }
+
+    .botones__noticias {
+        @include botonSeguirLeyendo();
+        &:hover {
+            @include botones--hover;
+        }
+    }
+
+    .botonAtrasNoticias {
+        color: $rojo;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+    }
+
+
+    /// PAGINATION
+
+.page-link {
+    color: $negro;
+    border: 0px;
+}
