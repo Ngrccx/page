@@ -259,12 +259,12 @@
 }
 
 .separadorParallax {
-  height: 30vh;
   background-attachment: fixed;
   background-position: center bottom;
   background-repeat: no-repeat;
   background-size: cover;
   background-color: white;
+  height: 30vh;
 }
 
 .lineaRoja {
@@ -634,14 +634,56 @@ a, a:hover, a:focus, a:active {
   margin-right: 20%;
   text-align: center;
   background: #F8C02D;
-  text-align: center;
   color: #333333;
+  font-weight: 700;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-bottom: 500px;
+}
+
+.articuloInvertido {
+  background-color: #333333;
+}
+
+.articuloInvertido__titulo {
+  font-size: 1.5rem;
+  font-weight: 900;
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 0px 5%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 1.5rem;
+  color: white;
+}
+
+.articuloInvertido__parrafo {
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 3rem;
+  margin-left: 20%;
+  margin-right: 20%;
+  text-align: center;
+  margin-top: 1rem;
+  color: white;
+}
+
+.articuloInvertido__parrafo--resaltado {
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 3rem;
+  margin-left: 20%;
+  margin-right: 20%;
+  text-align: center;
+  background: #F8C02D;
+  text-align: center;
+  color: white;
   font-weight: 700;
   margin-bottom: 500px;
 }
 
 .parallaxVoluntarios {
-  height: 30vh;
   background-attachment: fixed;
   background-position: center bottom;
   background-repeat: no-repeat;
@@ -651,7 +693,6 @@ a, a:hover, a:focus, a:active {
 }
 
 .separadorIngreso {
-  height: 30vh;
   background-attachment: fixed;
   background-position: center bottom;
   background-repeat: no-repeat;
@@ -662,13 +703,32 @@ a, a:hover, a:focus, a:active {
 }
 
 .parallaxNosotros {
-  height: 30vh;
   background-attachment: fixed;
   background-position: center bottom;
   background-repeat: no-repeat;
   background-size: cover;
   background-color: white;
   background-image: url(../images/jumbo-facutoth.webp);
+}
+
+.cardNosotros__Imagen {
+  min-height: 30vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center 20%;
+  margin: 1rem;
+}
+
+.cardNosotros__Texto {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1rem;
 }
 
 .ingresoCard {
@@ -737,11 +797,14 @@ a, a:hover, a:focus, a:active {
   .sobreNosotros-lg {
     display: none;
   }
+  .parallaxNosotros {
+    height: 40vh;
+  }
 }
 
 @media (min-width: 768px) and (orientation: landscape) {
-  .formularioIngreso {
-    max-width: 80%;
+  .formulario {
+    max-width: 70%;
     border-radius: 10px;
   }
 }
@@ -783,23 +846,9 @@ a, a:hover, a:focus, a:active {
   .sobreNosotros-sm {
     display: none;
   }
-}
-
-.cardNosotros__Imagen {
-  min-height: 30vh;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center 20%;
-  margin: 1rem;
-}
-
-.cardNosotros__Texto {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  text-align: center;
+  .formulario {
+    max-width: 60%;
+    border-radius: 10px;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

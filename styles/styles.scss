@@ -226,18 +226,36 @@ a, a:hover, a:focus, a:active {
         &--resaltado {
             @include parrafos-secciones;
             background: $amarillo;
-            text-align: center;
             color: $negro;
             font-weight: $bold;
+            margin-left: 0px;
+            margin-right: 0px;
             margin-bottom: 500px
+            
         }
     }
 }
 
-.articuloinvertido {
-    @extend .articulo;
-    color: $blanco;
-    background-color: $negro
+.articuloInvertido {
+    background-color: $negro;
+    &__titulo {
+        @include titulos-secciones;
+        margin-bottom: 1.5rem;
+        color: white
+    }
+    &__parrafo {
+        @include parrafos-secciones;
+        margin-top: 1rem;
+        color: white;
+        &--resaltado {
+            @include parrafos-secciones;
+            background: $amarillo;
+            text-align: center;
+            color: white;
+            font-weight: $bold;
+            margin-bottom: 500px
+        }
+    }
 }
 
 
@@ -246,13 +264,13 @@ a, a:hover, a:focus, a:active {
 
 ////// -----------INDEX------------
 .parallaxVoluntarios{
-    @include separadorParallax();
+    @include efectoParallax();
     background-image: url(../images/constituyentes-M65.webp);
 }
 
 ////// -----------QUIERO SER BOMBERO------------
 .separadorIngreso {
-    @include separadorParallax;
+    @include efectoParallax;
     height: 30vh;
     background-image: url(../images/rio-grupal.webp)
 }
@@ -260,11 +278,30 @@ a, a:hover, a:focus, a:active {
 
 ////// -----------SOBRE NOSOTROS------------
 .parallaxNosotros {
-    @include separadorParallax();
+    @include efectoParallax();
     background-image: url(../images/jumbo-facutoth.webp) ;
 }
 
+///// SOBRE NOSOTROS
+///// LA IMAGEND DE LAS TARJETAS SE MODIFICA DESDE EL HTML
 
+.cardNosotros {
+    &__Imagen {
+        min-height: 30vh;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center 20%;
+        margin: 1rem;
+    }
+
+    &__Texto {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        font-weight: $semi-bold;
+        font-size: 1rem;
+    }
+}
 
 ///// QUIERO SER BOMBERO
 
@@ -302,19 +339,21 @@ a, a:hover, a:focus, a:active {
 
 
 
-
-
+/// MEDIA QUERIES
 
 // SMALL
     @media (max-width: 767px) {
     .sobreNosotros-lg {
         display: none;
     }
+    .parallaxNosotros {
+        height: 40vh;
+    }
 }
 
 // MEDIA MEDIUM + LANDSCAPE
     @media (min-width: 768px) and (orientation: landscape) { 
-    .formularioIngreso {
+    .formulario {
         max-width: 70%;
         border-radius: 10px;
     }
@@ -338,7 +377,7 @@ a, a:hover, a:focus, a:active {
 }
 
 
-// MEDIA LARGE
+// LARGE
 @media (min-width: 768px) {
     .ingresoCard__imagen {
         max-width: 20rem;
@@ -361,28 +400,14 @@ a, a:hover, a:focus, a:active {
     .sobreNosotros-sm {
         display: none;
     }
-}
-
-
-
-
-
-
-///// SOBRE NOSOTROS
-///// LA IMAGEND DE LAS TARJETAS SE MODIFICA DESDE EL HTML
-
-.cardNosotros {
-    &__Imagen {
-        min-height: 30vh;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center 20%;
-        margin: 1rem;
-    }
-
-    &__Texto {
-        display: flex;
-        align-items: center;
-        text-align: center;
+    .formulario {
+        max-width: 60%;
+        border-radius: 10px;
     }
 }
+
+
+
+
+
+
